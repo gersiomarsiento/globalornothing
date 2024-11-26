@@ -1,25 +1,30 @@
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
 import netlifyLogo from 'public/netlify-logo.svg';
-import githubLogo from 'public/images/github-mark-white.svg';
+import { useState } from 'react';
 
 const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' },
-    { linkText: 'Classics', href: '/classics' }
+    { linkText: 'Inicio', href: '/' },
+    { linkText: 'Sobre Nosotros', href: '/about' },
+    { linkText: 'Servicios', href: '/services' },
+    { linkText: 'Contacto', href: '/contact' },
 ];
+const iconHamburger = '/images/icon-hamburger.svg';
 
 export function Header() {
+    const [isVisible, setIsVisible] = useState(false);
+
     return (
-        <nav className="flex flex-wrap items-center gap-4 pt-6 pb-12">
+        <nav className="fixed top-0 left-0 w-full flex flex-wrap justify-between items-center gap-4 px-2.5 pt-6 pb-12">
             <Link href="/">
                 <Image src={netlifyLogo} alt="Netlify logo" />
             </Link>
+            <button className="md:hidden" onClick={() => setIsVisible(!isVisible)}>
+                <Image width="50" height="50" src={iconHamburger} alt="Hamburger menu" />
+            </button>
             {!!navItems?.length && (
-                <ul className="flex flex-wrap gap-x-4 gap-y-1">
+                <ul className={`${isVisible ? 'flex' : 'hidden'} md:flex flex-wrap gap-x-4 gap-y-1`}>
                     {navItems.map((item, index) => (
                         <li key={index}>
                             <Link
@@ -32,15 +37,6 @@ export function Header() {
                     ))}
                 </ul>
             )}
-            <div className="flex-grow justify-end hidden lg:flex lg:mr-1">
-                <Link
-                    href="https://github.com/netlify-templates/next-platform-starter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Image src={githubLogo} alt="GitHub logo" className="w-7" />
-                </Link>
-            </div>
         </nav>
     );
 }

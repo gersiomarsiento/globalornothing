@@ -30,16 +30,24 @@ const ctx = getNetlifyContext();
 export default function Page() {
     return (
         <main className="flex flex-col gap-8 sm:gap-16">
-            <section className="flex flex-col items-start gap-3 sm:gap-4">
+            <section className="flex flex-col items-center justify-center gap-3 sm:gap-4 w-full h-[100svh]">
                 <ContextAlert />
-                <h1 className="mb-0">Netlify Platform Starter - Next.js</h1>
-                <p className="text-lg">Get started with Next.js and Netlify in seconds.</p>
-                <Link
-                    href="https://docs.netlify.com/frameworks/next-js/overview/"
-                    className="btn btn-lg btn-primary sm:btn-wide"
-                >
-                    Read the Docs
-                </Link>
+                <h1 className="mb-0">Global or Nothing</h1>
+                <p className="text-lg">Tu socio estratégico en comercio internacional, de Argentina al mundo.</p>
+                <div className="flex flex-col md:flex-row gap-2.5">
+                    <Link
+                        href="https://docs.netlify.com/frameworks/next-js/overview/"
+                        className="btn btn-lg btn-primary sm:btn-wide"
+                    >
+                        HABLA CON UN EXPERTO
+                    </Link>
+                    <Link
+                        href="https://docs.netlify.com/frameworks/next-js/overview/"
+                        className="btn btn-lg btn-primary sm:btn-wide"
+                    >
+                        NUESTROS SERVICIOS
+                    </Link>
+                </div>
             </section>
             {!!ctx && (
                 <section className="flex flex-col gap-4">
