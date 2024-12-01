@@ -16,7 +16,7 @@ export function Header() {
     const [isVisible, setIsVisible] = useState(false);
 
     return (
-        <nav className="fixed top-0 left-0 w-full flex flex-wrap justify-between items-center gap-4 px-2.5 pt-6 pb-12">
+        <nav className="fixed top-0 left-0 w-full flex flex-wrap justify-between items-center gap-4 px-2.5 md:px-5 py-4 z-10">
             <Link href="/">
                 <Image src={netlifyLogo} alt="Netlify logo" />
             </Link>

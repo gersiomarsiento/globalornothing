@@ -1,8 +1,11 @@
-import Link from 'next/link';
 import { Card } from 'components/card';
+import { HeroSection } from '../components/hero-section';
+import { WhySection } from '../components/why-section';
+import { WhoSection } from '../components/who-section';
+import { ServicesSection } from '../components/services-section';
+import { ContactSection } from '../components/contact-section';
 import { RandomQuote } from 'components/random-quote';
 import { Markdown } from 'components/markdown';
-import { ContextAlert } from 'components/context-alert';
 import { getNetlifyContext } from 'utils';
 
 const cards = [
@@ -29,26 +32,12 @@ const ctx = getNetlifyContext();
 
 export default function Page() {
     return (
-        <main className="flex flex-col gap-8 sm:gap-16">
-            <section className="flex flex-col items-center justify-center gap-3 sm:gap-4 w-full h-[100svh]">
-                <ContextAlert />
-                <h1 className="mb-0">Global or Nothing</h1>
-                <p className="text-lg">Tu socio estratégico en comercio internacional, de Argentina al mundo.</p>
-                <div className="flex flex-col md:flex-row gap-2.5">
-                    <Link
-                        href="https://docs.netlify.com/frameworks/next-js/overview/"
-                        className="btn btn-lg btn-primary sm:btn-wide"
-                    >
-                        HABLA CON UN EXPERTO
-                    </Link>
-                    <Link
-                        href="https://docs.netlify.com/frameworks/next-js/overview/"
-                        className="btn btn-lg btn-primary sm:btn-wide"
-                    >
-                        NUESTROS SERVICIOS
-                    </Link>
-                </div>
-            </section>
+        <main className="flex flex-col">
+            <HeroSection />
+            <WhySection />
+            <WhoSection />
+            <ServicesSection />
+            <ContactSection />
             {!!ctx && (
                 <section className="flex flex-col gap-4">
                     <Markdown content={contextExplainer} />

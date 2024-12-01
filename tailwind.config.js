@@ -10,7 +10,8 @@ module.exports = {
                     "linear-gradient(to bottom, theme('colors.neutral.950 / 0%'), theme('colors.neutral.950 / 100%')), url('/images/noise.png')"
             },
             colors: {
-                neutral: colors.neutral
+                neutral: colors.neutral,
+                'black-1': '#000C1A'
             },
             fontFamily: {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans]

@@ -1,0 +1,23 @@
+.btn-yellow {
+    background: linear-gradient(90deg, #FFD700 0%, #FFE166 30%, #FFE3B3 50%, #FFE266 70%, #FFD700 100%),
+    linear-gradient(105.45deg, #FFD700 2.3%, #FFE970 51.2%, #FFD700 96.33%);
+    border: none;
+    border-radius: 0;
+}
+.btn-yellow:hover {
+    background: linear-gradient(105.45deg, #FF9E00 2.3%, #FFE766 51.2%, #FF9E00 96.33%),
+    linear-gradient(0deg, rgba(255, 158, 0, 0.5), rgba(255, 158, 0, 0.5));
+    border: none;
+    border-radius: 0;
+    color: white
+}
+
+.btn-outline {
+    border: 1px solid #ffffff;
+    color: white;
+    border-radius: 0;
+}
+.btn-outline:hover {
+    background: white;
+    color: black;
+}

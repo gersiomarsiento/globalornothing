@@ -34,3 +34,13 @@ a {
 .btn:disabled {
     @apply text-neutral-400 bg-neutral-700;
 }
+
+.bg-overlay {
+    background: linear-gradient(0deg, rgba(0, 12, 26, 0.6), rgba(0, 12, 26, 0.6)),
+    linear-gradient(180deg, rgba(0, 12, 26, 0) 90.46%, #000C1A 100%);
+}
+
+.bg-overlay-2 {
+    background: linear-gradient(89.58deg, rgba(0, 12, 26, 0.85) 0.35%, rgba(0, 12, 26, 0.75) 40.36%, rgba(0, 12, 26, 0.6) 64.89%, rgba(0, 12, 26, 0.4) 79.78%, rgba(0, 12, 26, 0.1) 89.71%, rgba(0, 12, 26, 0) 99.64%);
+
+}
