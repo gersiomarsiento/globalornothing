@@ -4,12 +4,12 @@ import { WhySection } from '../components/why-section';
 import { WhoSection } from '../components/who-section';
 import { ServicesSection } from '../components/services-section';
 import { ContactSection } from '../components/contact-section';
-import { RandomQuote } from 'components/random-quote';
-import { Markdown } from 'components/markdown';
+// import { RandomQuote } from 'components/random-quote';
+// import { Markdown } from 'components/markdown';
 import { getNetlifyContext } from 'utils';
 
 const cards = [
-    //{ text: 'Hello', linkText: 'someLink', href: '/' }
+  //{ text: 'Hello', linkText: 'someLink', href: '/' }
 ];
 
 const contextExplainer = `
@@ -31,14 +31,14 @@ And as always with dynamic content, beware of layout shifts & flicker! (here, we
 const ctx = getNetlifyContext();
 
 export default function Page() {
-    return (
-        <main className="flex flex-col">
-            <HeroSection />
-            <WhySection />
-            <WhoSection />
-            <ServicesSection />
-            <ContactSection />
-            {!!ctx && (
+  return (
+    <main className="flex flex-col">
+      <HeroSection />
+      <WhySection />
+      <WhoSection />
+      <ServicesSection />
+      <ContactSection />
+      {/* {!!ctx && (
                 <section className="flex flex-col gap-4">
                     <Markdown content={contextExplainer} />
                     <RuntimeContextCard />
@@ -48,17 +48,17 @@ export default function Page() {
                 <Markdown content={preDynamicContentExplainer} />
                 <RandomQuote />
                 <Markdown content={postDynamicContentExplainer} />
-            </section>
-            {/* !!cards?.length && <CardsGrid cards={cards} /> */}
-        </main>
-    );
+            </section> */}
+      {/* !!cards?.length && <CardsGrid cards={cards} /> */}
+    </main>
+  );
 }
 
 function RuntimeContextCard() {
-    const title = `Netlify Context: running in ${ctx} mode.`;
-    if (ctx === 'dev') {
-        return <Card title={title} text="Next.js will rebuild any page you navigate to, including static pages." />;
-    } else {
-        return <Card title={title} text="This page was statically-generated at build time." />;
-    }
+  const title = `Netlify Context: running in ${ctx} mode.`;
+  if (ctx === 'dev') {
+    return <Card title={title} text="Next.js will rebuild any page you navigate to, including static pages." />;
+  } else {
+    return <Card title={title} text="This page was statically-generated at build time." />;
+  }
 }

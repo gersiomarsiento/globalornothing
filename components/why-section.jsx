@@ -1,7 +1,7 @@
 
 export function WhySection() {
     return (
-        <section className="h-[100svh] md:max-h-[496px] bg-black-1 py-16">
+        <section className="h-[100svh] justify-items-center md:max-h-[496px] bg-black-1 py-16">
             <h2 className="mb-16 w-fit place-content-center">¿Por qué elegir GLOBAL OR NOTHING?</h2>
             <div className="flex flex-col md:flex-row gap-20 px-[120px]">
                 <div className="flex flex-col gap-4 items-center text-center">
