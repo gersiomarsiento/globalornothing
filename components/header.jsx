@@ -33,18 +33,27 @@ export function Header() {
 
   return (
     <nav
-      className={`fixed transition-all duration-500 top-0 left-0 w-full flex flex-wrap justify-between items-center gap-4 px-2.5 md:px-[120px] py-4 z-20 ${
-        isScrolled ? 'bg-primary' : ''
-      } ${isScrollingUp ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`
+      fixed transition-all duration-500 top-0 left-0 w-full flex flex-wrap justify-between items-center gap-4 px-5 xl:px-[120px] py-4 z-20 
+      ${isScrolled ? 'bg-primary' : ''} 
+      ${isScrollingUp ? 'translate-y-0' : '-translate-y-full'}
+      ${isVisible ? 'xl-down:bg-primary' : ''}
+      `}
     >
       <Link href="/">
-        <Image src="/images/logo.png" width="480" height="48" alt="logo" />
+        <Image src="/images/logo.png" width="288" height="48" alt="logo" className="md-down:max-w-[60vw]" />
       </Link>
-      <button className="md:hidden" onClick={() => setIsVisible(!isVisible)}>
-        <Image width="50" height="50" src={iconHamburger} alt="Hamburger menu" />
+      <button className="xl:hidden" onClick={() => setIsVisible(!isVisible)}>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 34V32H40V34H8ZM8 25V23H40V25H8ZM8 16V14H40V16H8Z" fill="currentColor" />
+        </svg>
       </button>
       {!!navItems?.length && (
-        <ul className={`${isVisible ? 'flex' : 'hidden'} md:flex flex-wrap gap-x-10 gap-y-1`}>
+        <ul
+          className={`${
+            isVisible ? 'flex animate-slideInFromTop' : 'hidden'
+          } xl:flex flex-col xl:flex-row flex-wrap xl-down:w-full xl-down:items-center gap-x-10 gap-y-1`}
+        >
           {navItems.map((item, index) => (
             <li key={index}>
               <Link

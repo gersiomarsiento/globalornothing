@@ -63,7 +63,23 @@ a {
     linear-gradient(180deg, rgba(0, 12, 26, 0) 90.46%, #000C1A 100%);
 }
 
-.bg-overlay-2 {
-    background: linear-gradient(89.58deg, rgba(0, 12, 26, 0.85) 0.35%, rgba(0, 12, 26, 0.75) 40.36%, rgba(0, 12, 26, 0.6) 64.89%, rgba(0, 12, 26, 0.4) 79.78%, rgba(0, 12, 26, 0.1) 89.71%, rgba(0, 12, 26, 0) 99.64%);
-
+@media screen and (min-width: 768px){
+    .bg-overlay-2 {
+        background: linear-gradient(89.58deg, rgba(0, 12, 26, 0.85) 0.35%, rgba(0, 12, 26, 0.75) 40.36%, rgba(0, 12, 26, 0.6) 64.89%, rgba(0, 12, 26, 0.4) 79.78%, rgba(0, 12, 26, 0.1) 89.71%, rgba(0, 12, 26, 0) 99.64%);
+    }
+}
+@media screen and (max-width: 767px){
+    .bg-overlay-title {
+        background: linear-gradient(180deg, 
+        #000C1A 0%, 
+        rgba(0, 12, 26, 0.90) 1.59%, 
+        rgba(0, 12, 26, 0.75) 3.71%, 
+        rgba(0, 12, 26, 0.08) 25.36%, 
+        rgba(0, 12, 26, 0.00) 50%) ;
+    }
+    .bg-overlay-copy {
+        background: linear-gradient(180deg, 
+        rgba(0, 12, 26, 0.00) 0%, 
+         #000C1A 100%) ;
+    }
 }

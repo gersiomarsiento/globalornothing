@@ -9,8 +9,8 @@ const navItems = [
 export function Footer() {
   return (
     <footer className="bg-primary relative">
-      <div className="footer-wrapper px-[140px] py-[64px] flex flex-row">
-        <div className="flex flex-col pr-[120px]">
+      <div className="footer-wrapper px-5 xl-down:pb-20 xl:px-[140px] py-[64px] flex flex-col md:flex-row">
+        <div className="flex flex-col xl-down:pb-5 md:pr-10 xl:pr-[120px]">
           <Link href="/">
             <Image src="/images/logo.png" width="480" height="48" alt="logo" />
           </Link>
@@ -19,7 +19,7 @@ export function Footer() {
             horizontes, conectándote con mercados globales y transformando tu visión en una realidad internacional.
           </p>
         </div>
-        <div className="min-w-[300px]">
+        <div className=" md-down:hidden md:min-w-[200px] xl:min-w-[300px]">
           <h6>NAVEGACIÓN</h6>
           {!!navItems?.length && (
             <ul className="flex flex-col gap-y-1">
@@ -33,7 +33,7 @@ export function Footer() {
             </ul>
           )}
         </div>
-        <div className="min-w-[300px]">
+        <div className="md:min-w-[200px] xl:min-w-[300px]">
           <h6>HEAD OFFICE - ARGENTINA</h6>
           <p>ejemplo@correo.com</p>
           <p>Tel.: 123 123 123 123</p>
@@ -51,9 +51,9 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <p className="absolute bottom-2 inset-center-x">
-        Copyright ©2024 All rights reserved | This website was designed by VC
-      </p>
+      <div className="absolute bottom-2 inset-center-x w-full text-center px-5">
+        <p className="">Copyright ©2024 All rights reserved | This website was designed by VC</p>
+      </div>
     </footer>
   );
 }
