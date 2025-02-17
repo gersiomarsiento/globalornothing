@@ -6,7 +6,6 @@ export function HeroSection() {
     <section className="relative flex flex-col items-center justify-center gap-3 sm:gap-4 w-full h-[100svh]">
       <img className="absolute h-full w-full object-cover" src="/images/hero.png" alt="" />
       <div className="bg-overlay absolute h-full w-full"> </div>
-      <ContextAlert />
       <div className="hero-text-container px-5 text-center z-10 justify-items-center">
         <h1 className="mb-4">Global or Nothing</h1>
         <p className="text-lg mb-10">Tu socio estratégico en comercio internacional, de Argentina al mundo.</p>

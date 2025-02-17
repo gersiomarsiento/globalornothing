@@ -2,9 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const navItems = [
-  { linkText: 'Sobre Nosotros', href: '/about' },
-  { linkText: 'Servicios', href: '/services' },
-  { linkText: 'Contacto', href: '/contact' }
+  { linkText: 'Sobre Nosotros', href: '/pages/about' },
+  { linkText: 'Servicios', href: '/pages/services' },
+  { linkText: 'Contacto', href: '/pages/contact' }
 ];
 export function Footer() {
   return (

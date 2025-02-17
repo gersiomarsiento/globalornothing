@@ -5,9 +5,9 @@ import { useState, useEffect } from 'react';
 
 const navItems = [
   { linkText: 'Inicio', href: '/' },
-  { linkText: 'Sobre Nosotros', href: '/about' },
-  { linkText: 'Servicios', href: '/services' },
-  { linkText: 'Contacto', href: '/contact' }
+  { linkText: 'Sobre Nosotros', href: '/pages/about' },
+  { linkText: 'Servicios', href: '/pages/services' },
+  { linkText: 'Contacto', href: '/pages/contact' }
 ];
 const iconHamburger = '/images/icon-hamburger.svg';
 
