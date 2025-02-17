@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import '../styles/buttons.css';
 import '../styles/animations.css';
+import '../styles/fonts.css';
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 

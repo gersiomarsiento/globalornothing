@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function WhoSection() {
   return (
-    <section className="relative h-[100svh] md:max-h-[788px] bg-black-1">
+    <section className="relative h-[100svh] md:max-h-[788px] bg-black">
       <img className="absolute h-full w-full object-cover" src="/images/plane.jpg" alt="" />
       <div className="bg-overlay-2 absolute h-full w-full  md:max-w-[75%]">
         <div className="relative h-full w-full">

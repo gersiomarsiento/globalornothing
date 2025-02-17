@@ -1,8 +1,6 @@
 const SmallSection = ({ src, title, reverse }) => (
   <section
-    className={`flex md:grid-cols-2 p-[120px] ${
-      reverse ? 'md:flex-row-reverse bg-primary bg-opacity-60' : 'bg-black-1'
-    }`}
+    className={`flex md:grid-cols-2 p-[120px] ${reverse ? 'md:flex-row-reverse bg-primary bg-opacity-60' : 'bg-black'}`}
   >
     <div className="flex w-full items-center justify-center px-10">
       <span className="text-white text-center text-2xl uppercase">{title}</span>
@@ -40,7 +38,7 @@ export function ServicesPageContent() {
   ];
 
   return (
-    <div className="bg-black-1">
+    <div className="bg-black">
       <section className="bg-primary bg-opacity-60 p-[120px]">
         <div className="grid md:grid-cols-2">
           <div className="relative w-full aspect-[1.5]">

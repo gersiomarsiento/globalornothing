@@ -21,7 +21,7 @@ export function ServicesSection() {
     'Visita nuestra sección de servicios para saber más.'
   ];
   return (
-    <section className="bg-black-1">
+    <section className="bg-black">
       <h2 className="py-20 w-fit mx-auto">Descubre nuestros servicios</h2>
       <div className="grid md-down:grid-cols-1 md:grid-cols-2">
         {images.map((src, index) => (
