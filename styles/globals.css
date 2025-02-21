@@ -5,85 +5,219 @@
 @tailwind utilities;
 
 @layer base {
-    :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
-        font-size: 0.9em;
-    }
+  :not(pre) > code {
+    @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
+    font-size: 0.9em;
+  }
 
-    h1 {
-        @apply mb-6 text-4xl font-bold tracking-tight md:text-5xl;
-    }
+  h1 {
+    @apply mb-6 text-4xl font-bold tracking-tight md:text-5xl;
+  }
 }
 
 html {
-    scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 a {
-    @apply underline
+  @apply underline;
 }
 
 .markdown {
-    @apply mb-1;
+  @apply mb-1;
 }
 
 .alert .markdown {
-    @apply mb-0;
+  @apply mb-0;
 }
 
 .markdown p {
-    @apply mb-3;
+  @apply mb-3;
 }
 
 .btn:disabled {
-    @apply text-neutral-400 bg-neutral-700;
+  @apply text-neutral-400 bg-neutral-700;
 }
 
 .inset-center {
-    --tw-translate-x: -50%;
-    --tw-translate-y: -50%;
-    position: absolute !important;
-    top: 50%;
-    left: 50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y));
-  }
+  --tw-translate-x: -50%;
+  --tw-translate-y: -50%;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y));
+}
 
-  .inset-center-y {
-    --tw-translate-y: -50%;
-    position: absolute !important;
-    top: 50%;
-    transform: translateY(var(--tw-translate-y));
-  }
+.inset-center-y {
+  --tw-translate-y: -50%;
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(var(--tw-translate-y));
+}
 
-  .inset-center-x {
-    --tw-translate-x: -50%;
-    position: absolute !important;
-    left: 50%;
-    transform: translateX(var(--tw-translate-x));
-  }
+.inset-center-x {
+  --tw-translate-x: -50%;
+  position: absolute !important;
+  left: 50%;
+  transform: translateX(var(--tw-translate-x));
+}
 
 .bg-overlay {
-    background: linear-gradient(0deg, rgba(0, 12, 26, 0.6), rgba(0, 12, 26, 0.6)),
-    linear-gradient(180deg, rgba(0, 12, 26, 0) 90.46%, #000C1A 100%);
+  background: linear-gradient(0deg, rgba(0, 12, 26, 0.6), rgba(0, 12, 26, 0.6)),
+    linear-gradient(180deg, rgba(0, 12, 26, 0) 90.46%, #000c1a 100%);
 }
 
-@media screen and (min-width: 768px){
-    .bg-overlay-2 {
-        background: linear-gradient(89.58deg, rgba(0, 12, 26, 0.85) 0.35%, rgba(0, 12, 26, 0.75) 40.36%, rgba(0, 12, 26, 0.6) 64.89%, rgba(0, 12, 26, 0.4) 79.78%, rgba(0, 12, 26, 0.1) 89.71%, rgba(0, 12, 26, 0) 99.64%);
-    }
+/* Text styles */
+
+.h1 {
+  font-family: 'DM Serif Text';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px;
 }
-@media screen and (max-width: 767px){
-    .bg-overlay-title {
-        background: linear-gradient(180deg, 
-        #000C1A 0%, 
-        rgba(0, 12, 26, 0.90) 1.59%, 
-        rgba(0, 12, 26, 0.75) 3.71%, 
-        rgba(0, 12, 26, 0.08) 25.36%, 
-        rgba(0, 12, 26, 0.00) 50%) ;
-    }
-    .bg-overlay-copy {
-        background: linear-gradient(180deg, 
-        rgba(0, 12, 26, 0.00) 0%, 
-         #000C1A 100%) ;
-    }
+
+.h2 {
+  font-family: 'DM Serif Text';
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+}
+
+.h3 {
+  font-family: 'DM Serif Text';
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+.h4 {
+  font-family: 'DM Serif Text';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.subtitle {
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  text-transform: uppercase;
+}
+
+.subtitle-lowercase {
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.large-label {
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+.button {
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+}
+
+.p-text {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.08px;
+}
+
+.p-text-sm {
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.035px;
+}
+
+.caption {
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 20px;
+  letter-spacing: 0.06px;
+}
+
+/* End of text styles */
+
+@media screen and (min-width: 768px) {
+  .bg-overlay-2 {
+    background: linear-gradient(
+      89.58deg,
+      rgba(0, 12, 26, 0.85) 0.35%,
+      rgba(0, 12, 26, 0.75) 40.36%,
+      rgba(0, 12, 26, 0.6) 64.89%,
+      rgba(0, 12, 26, 0.4) 79.78%,
+      rgba(0, 12, 26, 0.1) 89.71%,
+      rgba(0, 12, 26, 0) 99.64%
+    );
+  }
+}
+@media screen and (max-width: 767px) {
+  .bg-overlay-title {
+    background: linear-gradient(
+      180deg,
+      #000c1a 0%,
+      rgba(0, 12, 26, 0.9) 1.59%,
+      rgba(0, 12, 26, 0.75) 3.71%,
+      rgba(0, 12, 26, 0.08) 25.36%,
+      rgba(0, 12, 26, 0) 50%
+    );
+  }
+  .bg-overlay-copy {
+    background: linear-gradient(180deg, rgba(0, 12, 26, 0) 0%, #000c1a 100%);
+  }
+
+  /* Text styles */
+  .h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .p-text {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.035px;
+  }
+  /* End of text styles */
 }
