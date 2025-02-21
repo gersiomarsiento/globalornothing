@@ -14,18 +14,21 @@ export function Footer() {
           <Link href="/">
             <Image src="/images/logo.png" width="480" height="48" alt="logo" />
           </Link>
-          <p>
+          <p className="caption">
             En Global or Nothing, creemos que los límites son solo el comienzo. Nos dedicamos a ayudarte a expandir tus
             horizontes, conectándote con mercados globales y transformando tu visión en una realidad internacional.
           </p>
         </div>
         <div className=" md-down:hidden md:min-w-[200px] xl:min-w-[300px]">
-          <h6>NAVEGACIÓN</h6>
+          <h6 className="large-label pb-[9px]">NAVEGACIÓN</h6>
           {!!navItems?.length && (
             <ul className="flex flex-col gap-y-1">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <Link href={item.href} className="inline-block no-underline py-1 transition hover:opacity-80">
+                  <Link
+                    href={item.href}
+                    className="inline-block large-label no-underline py-[9px] transition hover:opacity-80"
+                  >
                     {item.linkText}
                   </Link>
                 </li>
@@ -34,11 +37,11 @@ export function Footer() {
           )}
         </div>
         <div className="md:min-w-[200px] xl:min-w-[300px]">
-          <h6>HEAD OFFICE - ARGENTINA</h6>
-          <p>ejemplo@correo.com</p>
-          <p>Tel.: 123 123 123 123</p>
-          <p>Dirección, CP, Capital Federal</p>
-          <div className="flex flex-row">
+          <h6 className="p-text-sm py-[4px]">HEAD OFFICE - ARGENTINA</h6>
+          <p className="p-text-sm py-[4px]">ejemplo@correo.com</p>
+          <p className="p-text-sm py-[4px]">Tel.: 123 123 123 123</p>
+          <p className="p-text-sm py-[4px]">Alicia Moreau de Justo 2050, Of. 328, Puerto Madero, C.A.B.A.</p>
+          {/* <div className="flex flex-row">
             <Link href="/">
               <Image src="/images/icon-ig.svg" width="24" height="24" alt="instagram" />
             </Link>
@@ -48,11 +51,13 @@ export function Footer() {
             <Link href="/">
               <Image src="/images/icon-ig.svg" width="24" height="24" alt="instagram" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="absolute bottom-2 inset-center-x w-full text-center px-5">
-        <p className="">Copyright ©2024 All rights reserved | This website was designed by VC</p>
+        <p className="caption">
+          Copyright ©2024 All rights reserved | This website was designed by <a href="">VC</a>
+        </p>
       </div>
     </footer>
   );

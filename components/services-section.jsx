@@ -22,13 +22,13 @@ export function ServicesSection() {
   ];
   return (
     <section className="bg-black">
-      <h2 className="py-20 w-fit mx-auto">Descubre nuestros servicios</h2>
+      <h2 className="py-20 w-fit mx-auto h2 bg-gradient text-transparent bg-clip-text">Descubre nuestros servicios</h2>
       <div className="grid md-down:grid-cols-1 md:grid-cols-2">
         {images.map((src, index) => (
           <div key={index} className="relative w-full aspect-[1.5]">
             <img src={src} alt={`Service ${index + 1}`} className="w-full h-full object-cover opacity-45" />
             <div className="absolute inset-0 flex items-center justify-center px-10">
-              <span className="text-white text-center text-2xl uppercase">{texts[index]}</span>
+              <span className="text-white text-center uppercase h3">{texts[index]}</span>
             </div>
           </div>
         ))}
