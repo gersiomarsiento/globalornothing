@@ -2,10 +2,13 @@
     background: var(--gold_gradient);
     border: none;
     border-radius: 0;
+    height: 48px;
+padding: 0px 24px;
 }
 .btn-yellow:hover {
-    background: linear-gradient(105.45deg, #FF9E00 2.3%, #FFE766 51.2%, #FF9E00 96.33%),
-    linear-gradient(0deg, rgba(255, 158, 0, 0.5), rgba(255, 158, 0, 0.5));
+    /* background: linear-gradient(105.45deg, #FF9E00 2.3%, #FFE766 51.2%, #FF9E00 96.33%),
+    linear-gradient(0deg, rgba(255, 158, 0, 0.5), rgba(255, 158, 0, 0.5)); */
+    background: linear-gradient(0deg, rgba(142, 107, 20, 0.50) 0%, rgba(142, 107, 20, 0.50) 100%), linear-gradient(96deg, #D4AF37 0%, #D4AF37 15%, #F5DB85 45%, #FCE495 50%, #F5DB86 55%, #D4AF37 85%, #D8B440 100%);
     border: none;
     border-radius: 0;
     color: white
@@ -15,8 +18,12 @@
     border: 1px solid #ffffff;
     color: white;
     border-radius: 0;
+    background: transparent;
+    transition: background 0.6s ease,  color 0.6s ease;
 }
 .btn-outline:hover {
-    background: white;
+    /* background: white; */
     color: black;
+    background: linear-gradient(96deg, #D4AF37 0%, #D4AF37 15%, #F5DB85 45%, #FCE495 50%, #F5DB86 55%, #D4AF37 85%, #D8B440 100%);
+    
 }

@@ -58,8 +58,8 @@ export function Header() {
             <li key={index}>
               <Link
                 href={item.href}
-                className={`inline-block no-underline px-4 py-2.5 transition hover:opacity-80 ${
-                  item.linkText === 'Contacto' ? 'border border-solid border-white px-6 uppercase' : ''
+                className={`inline-block large-label no-underline px-4 py-2.5 transition hover:opacity-80 ${
+                  item.linkText === 'Contacto' ? 'btn-outline button' : ''
                 }`}
               >
                 {item.linkText}

@@ -3,7 +3,7 @@ import { ContactForm } from '/components/contact-form';
 
 export default function Contact() {
   return (
-    <div className="bg-black-1">
+    <div className="bg-black">
       <section className="relative flex flex-col items-center justify-center gap-3 sm:gap-4 w-full h-[100svh]">
         <img className="absolute h-full w-full object-cover" src="/images/city-view.jpeg" alt="" />
         <div className="bg-overlay absolute h-full w-full"> </div>

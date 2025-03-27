@@ -12,6 +12,7 @@ export default function Page() {
     <main className="flex flex-col">
       <HeroSection />
       <WhoSection />
+      <WhySection />
       <ServicesSection />
       <WhySection />
       <ContactSection />
