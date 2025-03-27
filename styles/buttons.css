@@ -1,6 +1,5 @@
 .btn-yellow {
-    background: linear-gradient(90deg, #FFD700 0%, #FFE166 30%, #FFE3B3 50%, #FFE266 70%, #FFD700 100%),
-    linear-gradient(105.45deg, #FFD700 2.3%, #FFE970 51.2%, #FFD700 96.33%);
+    background: var(--gold_gradient);
     border: none;
     border-radius: 0;
 }

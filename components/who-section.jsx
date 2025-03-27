@@ -7,7 +7,9 @@ export function WhoSection() {
       <div className="bg-overlay-2 absolute h-full w-full  md:max-w-[75%]">
         <div className="relative h-full w-full">
           <div className="content-wrapper absolute inset-center-y md:pl-5 xl:pl-[120px] md-down:h-full md:max-w-[80%] flex flex-col md:gap-10">
-            <h4 className="md-down:h-full md-down:pt-12 md-down:text-center bg-overlay-title">Quiénes somos</h4>
+            <h4 className="md-down:h-full md-down:pt-12 md-down:text-center bg-overlay-title headline-6 md:text-[45px] md:leading-[52px]">
+              Quiénes somos
+            </h4>
             <div className="flex flex-col gap-10 bg-overlay-copy md-down:pt-20 md-down:pb-10 md-down:px-5">
               <p>
                 En Global or Nothing, creemos que los límites son solo el comienzo. Nos dedicamos a ayudarte a expandir

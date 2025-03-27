@@ -15,8 +15,12 @@
     }
 }
 
+:root {
+    --gold_gradient: linear-gradient(95.99deg, #D4AF37 0%, #D4AF37 15%, #F5DB85 45%, #FCE495 50%, #F5DB86 55%, #D4AF37 85%, #D8B440 100%);
+}
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    font-family: DM Serif Text;
 }
 
 a {
@@ -66,6 +70,62 @@ a {
     background: linear-gradient(0deg, rgba(0, 12, 26, 0.6), rgba(0, 12, 26, 0.6)),
     linear-gradient(180deg, rgba(0, 12, 26, 0) 90.46%, #000C1A 100%);
 }
+
+@media screen and (max-width: 767px) {
+    .border-gradient {
+        border-image: var(--gold_gradient) 1;
+        border-width: 4px;
+        border-style: solid;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+    }
+}
+
+/* TEXTS */
+.masked-text {
+    background: linear-gradient(95.99deg, #D4AF37 0%, #D4AF37 15%, #F5DB85 45%, #FCE495 50%, #F5DB86 55%, #D4AF37 85%, #D8B440 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.headline-1 {
+    font-size: 48px;
+    line-height: 56px;
+}
+.headline-2 {
+    font-size: 45px;
+    line-height: 52px;
+}
+.headline-4 {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.headline-6 {
+    font-size: 26px;
+    line-height: 32px;
+}
+.headline-7 {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+@media screen and (min-width: 768px) {
+    .gold-headline {
+        @apply masked-text headline-4;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gold-headline {
+        @apply masked-text headline-6;
+    }
+}
+
+
 
 @media screen and (min-width: 768px){
     .bg-overlay-2 {

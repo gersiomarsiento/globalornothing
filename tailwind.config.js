@@ -12,7 +12,9 @@ module.exports = {
       colors: {
         neutral: colors.neutral,
         'black-1': '#000C1A',
-        primary: '#002B5B'
+        primary: '#002B5B',
+        'gold-gradient':
+          'linear-gradient(95.99deg, #D4AF37 0%, #D4AF37 15%, #F5DB85 45%, #FCE495 50%, #F5DB86 55%, #D4AF37 85%, #D8B440 100%)'
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans]
